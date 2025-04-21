@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Automation Practice Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Automation testing practice page" />
+    <meta name="author" content="ChatGPT" />
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f9f9f9;
+      }
+      header,
+      footer,
+      nav,
+      section,
+      article,
+      aside {
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        background: #fff;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #333;
+        border-collapse: collapse;
+        padding: 8px;
+      }
+      table {
+        width: 100%;
+      }
+      iframe {
+        width: 100%;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to the Automation Practice Page</h1>
+      <nav>
+        <a href="#form-section">Form</a> | <a href="#table-section">Table</a> |
+        <a href="#media-section">Media</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="form-section">
+        <h2>Form Elements</h2>
+        <form action="/submit" method="POST">
+          <label for="text">Text Input:</label>
+          <input type="text" id="text" name="textInput" /><br /><br />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" /><br /><br />
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" /><br /><br />
+
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" /><br /><br />
+
+          <label for="number">Number:</label>
+          <input type="number" id="number" name="number" /><br /><br />
+
+          <label>Gender:</label>
+          <input type="radio" name="gender" value="male" /> Male
+          <input type="radio" name="gender" value="female" /> Female<br /><br />
+
+          <label>Hobbies:</label>
+          <input type="checkbox" name="hobby" value="sports" /> Sports
+          <input type="checkbox" name="hobby" value="music" /> Music<br /><br />
+
+          <label for="file">Upload File:</label>
+          <input type="file" id="file" name="file" /><br /><br />
+
+          <label for="color">Pick a color:</label>
+          <input type="color" id="color" name="color" /><br /><br />
+
+          <label for="country">Select Country:</label>
+          <select id="country" name="country">
+            <option value="">Choose...</option>
+            <option value="jo">Jordan</option>
+            <option value="us">USA</option>
+            <option value="de">Germany</option></select
+          ><br /><br />
+
+          <label for="bio">Short Bio:</label><br />
+          <textarea id="bio" name="bio" rows="4" cols="50"></textarea
+          ><br /><br />
+
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </form>
+      </section>
+
+      <section id="table-section">
+        <h2>Table Section</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Subject</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Ali</td>
+              <td>Math</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Sarah</td>
+              <td>Science</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>John</td>
+              <td>History</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="list-section">
+        <h2>Lists</h2>
+        <h3>Unordered List</h3>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+
+        <h3>Ordered List</h3>
+        <ol>
+          <li>Learn Basics</li>
+          <li>Practice</li>
+          <li>Test</li>
+        </ol>
+
+        <h3>Definition List</h3>
+        <dl>
+          <dt>HTML</dt>
+          <dd>HyperText Markup Language</dd>
+          <dt>CSS</dt>
+          <dd>Cascading Style Sheets</dd>
+        </dl>
+      </section>
+
+      <section id="media-section">
+        <h2>Media</h2>
+        <figure>
+          <img
+            src="https://via.placeholder.com/300"
+            alt="Sample Image"
+            width="300"
+          />
+          <figcaption>Sample Image</figcaption>
+        </figure>
+
+        <audio controls>
+          <source
+            src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+            type="audio/mpeg"
+          />
+          Your browser does not support the audio element.</audio
+        ><br /><br />
+
+        <video width="320" height="240" controls>
+          <source
+            src="https://www.w3schools.com/html/movie.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.</video
+        ><br /><br />
+
+        <iframe src="https://www.example.com" title="Example Site"></iframe>
+      </section>
+
+      <article>
+        <h2>Article</h2>
+        <p>
+          This is an article element. Useful for testing text extraction and
+          accessibility.
+        </p>
+      </article>
+
+      <aside>
+        <h2>Aside</h2>
+        <p>
+          This is an aside element, often used for side notes or advertisements.
+        </p>
+      </aside>
+    </main>
+
+    <footer>
+      <p>
+        Contact us at <a href="mailto:test@example.com">test@example.com</a>
+      </p>
+      <small>&copy; 2025 Practice Inc.</small>
+    </footer>
+
+    <hr />
+    <h3>Dynamic Dropdown (Country -> City)</h3>
+
+    <label for="dyn-country">Select Country:</label>
+    <select id="dyn-country" name="dyn-country">
+      <option value="">-- Choose a country --</option>
+      <option value="jordan">Jordan</option>
+      <option value="usa">USA</option>
+      <option value="germany">Germany</option></select
+    ><br /><br />
+
+    <label for="city">Select City:</label>
+    <select id="city" name="city">
+      <option value="">-- Select a city --</option>
+    </select>
+
+    <script>
+      const countryCityMap = {
+        jordan: ["Amman", "Zarqa", "Irbid"],
+        usa: ["New York", "Los Angeles", "Chicago"],
+        germany: ["Berlin", "Munich", "Frankfurt"],
+      };
+
+      const countryDropdown = document.getElementById("dyn-country");
+      const cityDropdown = document.getElementById("city");
+
+      countryDropdown.addEventListener("change", function () {
+        const selectedCountry = this.value;
+        const cities = countryCityMap[selectedCountry] || [];
+
+        // Clear previous cities
+        cityDropdown.innerHTML =
+          '<option value="">-- Select a city --</option>';
+
+        // Populate cities
+        cities.forEach((city) => {
+          const option = document.createElement("option");
+          option.value = city.toLowerCase();
+          option.textContent = city;
+          cityDropdown.appendChild(option);
+        });
+      });
+    </script>
+  </body>
+</html>
